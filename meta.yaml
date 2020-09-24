@@ -1,0 +1,13 @@
+package:
+  name: test_mac_build
+  version: 1.0.0
+
+source:
+  path: ./
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+  host:
+    - cmake
+    - make
