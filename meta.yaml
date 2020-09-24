@@ -7,7 +7,7 @@ source:
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
+    - {{ compiler('cxx') }} # [not osx]
   host:
     - cmake
     - make
