@@ -21,6 +21,7 @@ jobs:
           echo "========================================== PRINTENV =========================================="
           printenv
           echo "========================================== PRINTENV =========================================="
+          sysctl -a
           conda create -n conda_build python=3.8 conda-build -y
           conda activate conda_build
           mkdir conda_pkgs_output
