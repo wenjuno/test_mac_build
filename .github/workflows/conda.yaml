@@ -19,7 +19,7 @@ jobs:
           conda create -n conda_build python=3.8 conda-build -y
           conda activate conda_build
           mkdir conda_pkgs_output
-          conda build ./ --output-dir ./conda_pkgs_output
+          conda build ./ --output-folder ./conda_pkgs_output
       - name: Publish Artifacts
         uses: actions/upload-artifact@v2
         with:
