@@ -18,6 +18,8 @@ jobs:
         shell: bash -l {0}
         run: |
           set -ex
+          echo "pwd: $(pwd)"
+          echo "meta.yaml files: $(find ./ -name 'meta.yaml')"
           conda create -n conda_build python=3.8 conda-build -y
           conda activate conda_build
           conda build ./
