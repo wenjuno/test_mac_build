@@ -5,6 +5,10 @@ package:
 source:
   path: ./
 
+build:
+  string: 10d15
+  number: 1
+
 requirements:
   build:
     - {{ compiler('cxx') }} # [not osx]
