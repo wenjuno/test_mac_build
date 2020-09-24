@@ -20,11 +20,10 @@ jobs:
           set -ex
           conda create -n conda_build python=3.8 conda-build -y
           conda activate conda_build
-          mkdir conda_pkgs_output
-          conda build ./ --output-folder ./conda_pkgs_output
+          conda build ./
       - name: Publish Artifacts
         uses: actions/upload-artifact@v2
         with:
           name: packages
-          path: conda_pkgs_output/*/test_mac_build-*.tar.bz2
+          path: ${CONDA_PREFIX}/conda-bld/*/test_mac_build-*.tar.bz2
           if-no-files-found: "error"
